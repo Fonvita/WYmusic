@@ -1,0 +1,18 @@
+<!--pages/playlist/playlist.wxml-->
+<!-- 循环遍历轮播图 
+  swiper轮播组件。其中只可放置swiper-item组件,需要swiper-item这个标签来实现他想显示的内容
+-->
+<swiper indicator-dots="true" autoplay="true" interval="2000" duration="1000">
+  <block wx:for="{{swiperImgUrls}}" wx:key="url">
+    <swiper-item >
+      <image src="{{item.url}}" mode="widthFix" class="img"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="playlist-container">
+  <block wx:for="{{playlist}}" wx:key="_id">
+    <x-playlist playlist="{{item}}"></x-playlist>
+  </block>
+</view>
+

@@ -1,0 +1,82 @@
+/* pages/gedanSquare/gedanSquare.wxss */
+.gedan_tab {
+    padding: 40rpx 20rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gedan_select {
+    border-left: 6rpx solid #3c9;
+    /* height: 10rpx; */
+}
+
+.gedan_select text {
+    text-align: center;
+    font-size: 30rpx;
+    padding-left: 20rpx;
+}
+
+.catselectbtn {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAMAAACecocUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACdQTFRFiIiI+/z9vr6/xcXGnJyd9PX28/T1n5+fnp6ejIyMm5ub7e7v3t/gBUeqYAAAAEBJREFUeNpiYAABZgYI4GZj42LmYmPjBrJZGRlZmFkYGVnR2Bzs7JzMnOzsHAwMTCDAAyZRxHHqRTYfYS9AgAEAaTABl1/qO3QAAAAASUVORK5CYII=);
+    border: 1rpx solid #eee;
+    color: #999;
+    font-size: 26rpx;
+    padding: 8rpx 20rpx 8rpx 40rpx;
+    background-position: 10rpx center;
+    background-repeat: no-repeat;
+    border-radius: 3rpx;
+}
+
+/* 歌单广场 */
+
+.songSheet_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rpx;
+    justify-content: space-around;
+}
+
+.songSheet_wrap_active {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rpx;
+    justify-content: space-around;
+    margin-bottom: 100rpx;
+}
+
+.songSheet_item {
+    width: 30%;
+    margin-bottom: 20rpx;
+}
+
+.songSheet_img {
+    position: relative;
+}
+
+.songSheet_img image {
+    width: 100%;
+    border-radius: 15rpx;
+    height: 220rpx
+}
+
+.songSheet_img .songSheet_info {
+    position: absolute;
+    top: 5rpx;
+    right: 5rpx;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+    font-size: 24rpx;
+}
+
+.songSheet_titles {
+    font-size: 28rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}

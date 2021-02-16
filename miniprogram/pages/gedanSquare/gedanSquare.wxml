@@ -1,0 +1,44 @@
+<!--pages/gedanSquare/gedanSquare.wxml-->
+
+<!-- 歌单 -->
+<view class="main">
+    <view class="gedan_tab">
+        <view class="gedan_select">
+            <text class="">{{catelist.checked.name}}</text>
+        </view>
+        <view>
+            <text bindtap="togglePtype" class="catselectbtn">选择分类</text>
+        </view>
+    </view>
+    <view class="gedan_content">
+        <!-- <view hidden="{{!loading}}" style="height: 100%">
+            <template is="loading" />
+        </view> -->
+        <block wx:if="{{playlist.loading}}">
+            <view class="songSheet_wrap">
+                <!-- 控制遍历数量6个 -->
+                <view class="songSheet_item" wx:for="{{playlist.list.playlists}}" wx:key="{{item.id}}">
+                    <!-- 图片容器 -->
+                    <view class="songSheet_img">
+                        <!-- 图片 -->
+                        <image bindtap="openSongSheet" data-id="{{item.id}}" src="{{item.coverImgUrl}}" />
+                        <!-- 播放量。。。 -->
+                        <view class="songSheet_info">
+                            <!-- 播放量 -->
+                            <view class="play_count_wrap">
+                                <!-- 图标 -->
+                                <text class="iconfont icon-play" style="font-size:30rpx;"></text>
+                                <!-- 数值 -->
+                                <text class="play_count">{{item.playCount}}万</text>
+                            </view>
+                        </view>
+                    </view>
+                    <!-- 标题 -->
+                    <view class="songSheet_titles">{{item.name}}</view>
+                </view>
+                <template wx:if="{{!playlist.loading||playlist.list.more}}" is="loading" />
+            </view>
+        </block>
+    </view>
+
+</view>
